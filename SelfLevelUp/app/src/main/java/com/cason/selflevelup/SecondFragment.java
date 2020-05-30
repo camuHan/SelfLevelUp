@@ -1,6 +1,7 @@
 package com.cason.selflevelup;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -30,5 +31,12 @@ public class SecondFragment extends Fragment {
                         .navigate(R.id.action_SecondFragment_to_FirstFragment);
             }
         });
+
+        Bundle bundle = new Bundle();
+        int test1 = getArguments().getInt("test1");
+        String test2 = getArguments().getString("test2");
+        boolean test3 = getArguments().getBoolean("test3", false);
+
+        Log.e("test", "test1 = " + test1 + " test2 = " + test2 + " test3 " + test3);
     }
 }
