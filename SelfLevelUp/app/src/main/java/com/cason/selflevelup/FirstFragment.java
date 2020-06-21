@@ -65,12 +65,12 @@ public class FirstFragment extends Fragment {
 
     private ArrayList<Integer> getCategoryImageList(){
         ArrayList<Integer> arrList = new ArrayList<>();
-        arrList.add(R.drawable.baseline_accessibility_black_18dp);
-        arrList.add(R.drawable.baseline_medical_services_black_18dp);
-        arrList.add(R.drawable.baseline_create_black_18dp);
-        arrList.add(R.drawable.baseline_alarm_black_18dp);
-        arrList.add(R.drawable.baseline_insert_emoticon_black_18dp);
-        arrList.add(R.drawable.baseline_insert_emoticon_black_18dp);
+        arrList.add(R.drawable.exercise);
+        arrList.add(R.drawable.medicine);
+        arrList.add(R.drawable.study);
+        arrList.add(R.drawable.timetable);
+        arrList.add(R.drawable.etc);
+        arrList.add(R.drawable.another);
         return arrList;
     }
 
