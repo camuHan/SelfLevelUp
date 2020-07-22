@@ -22,6 +22,8 @@ public class FirstFragment extends Fragment {
     String mTag = "HSH";
     Button mBtnTest;
 
+    private MyGLSurfaceView mGLImage = null;
+
     private RecyclerView mMainCategoryGridRecyclerView;
     private RecyclerView.LayoutManager mMainCategoryLayoutManager;
     private MainCategoryAdapter mMainCategoryAdapter;
@@ -36,18 +38,19 @@ public class FirstFragment extends Fragment {
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         Log.e(mTag, "onViewCreated");
-        mBtnTest = view.findViewById(R.id.button_first);
-        view.findViewById(R.id.button_first).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Bundle bundle = new Bundle();
-                bundle.putInt("test1", 1);
-                bundle.putString("test2", "success");
-                bundle.putBoolean("test3", true);
-                NavHostFragment.findNavController(FirstFragment.this)
-                        .navigate(R.id.action_FirstFragment_to_SecondFragment, bundle);
-            }
-        });
+//        mBtnTest = view.findViewById(R.id.button_first);
+//        view.findViewById(R.id.button_first).setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Bundle bundle = new Bundle();
+//                bundle.putInt("test1", 1);
+//                bundle.putString("test2", "success");
+//                bundle.putBoolean("test3", true);
+//                NavHostFragment.findNavController(FirstFragment.this)
+//                        .navigate(R.id.action_FirstFragment_to_SecondFragment, bundle);
+//            }
+//        });
+        mGLImage = (MyGLSurfaceView) view.findViewById(R.id.gl_image_view);
 
         mMainCategoryGridRecyclerView = (RecyclerView) view.findViewById(R.id.main_category);
         mMainCategoryLayoutManager = new GridLayoutManager(getContext(), 2);
